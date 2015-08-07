@@ -3,6 +3,7 @@ Basic remote for the SAMSUNG UE55HU6905 TV over USB-UIRT
 
 ## Features
 * Volume (up, down, mute)
+* Channel (up, down)
 * Switch Input Source
 * Power (off/on)
 
