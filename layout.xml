@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout color="#303030">
 	<row>
-		<button text="Volume up ↑" ontap="volume_up" />
+		<button text="Volume ↑" ontap="vol_up" />
+		<button text="↑ Channel" ontap="ch_up" />
 	</row>
 	<row>
-		<button text="Volume down ↓" ontap="volume_down" />
+		<button text="Volume ↓" ontap="vol_dn" />
+		<button text="↓ Channel" ontap="ch_dn" />
 	</row>
 	<row>
 		<button text="Mute Sound Ω" ontap="mute" />

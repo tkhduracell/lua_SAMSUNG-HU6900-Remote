@@ -11,13 +11,13 @@ local server = libs.server;
 -- http://www.remotecentral.com/cgi-bin/files/rcfiles.cgi?area=pronto&db=discrete
 -- http://www.unifiedremote.com/tutorials/how-to-use-ir
 
-actions.volume_up = function()
+actions.vol_up = function()
 	for i=0, 5 do
-		libs.timer.timeout(actions.volume_up_, 100 * i); 
+		libs.timer.timeout(actions.volume_up, 100 * i); 
 	end
 end
 
-actions.volume_up_ = function()
+actions.volume_up = function()
     libs.server.run("Unified.USB-UIRT", "pronto", 
         "0000 006D 0000 0022 00AC 00AC " .. 
         "0015 0041 0015 0041 0015 0041 " .. 
@@ -34,13 +34,13 @@ actions.volume_up_ = function()
     );
 end
 
-actions.volume_down = function()
+actions.vol_dn = function()
 	for i=0, 5 do
-		libs.timer.timeout(actions.volume_down_, 100 * i); 
+		libs.timer.timeout(actions.volume_down, 100 * i); 
 	end
 end
 
-actions.volume_down_ = function()
+actions.volume_down = function()
     libs.server.run("Unified.USB-UIRT", "pronto", 
         "0000 006D 0000 0022 00AC 00AC " .. 
         "0015 0041 0015 0041 0015 0041 " .. 
@@ -108,4 +108,36 @@ actions.power = function()
     );
 end
 
+actions.ch_up = function()
+    libs.server.run("Unified.USB-UIRT", "pronto", 
+        "0000 006D 0000 0022 00AC 00AC " .. 
+        "0015 0041 0015 0041 0015 0041 " .. 
+        "0015 0016 0015 0016 0015 0016 " .. 
+        "0015 0016 0015 0016 0015 0041 " .. 
+        "0015 0041 0015 0041 0015 0016 " .. 
+        "0015 0016 0015 0016 0015 0016 " .. 
+        "0015 0016 0015 0016 0015 0041 " .. 
+        "0015 0016 0015 0016 0015 0041 " .. 
+        "0015 0016 0015 0016 0015 0016 " .. 
+        "0015 0041 0015 0016 0015 0041 " .. 
+        "0015 0041 0015 0016 0015 0041 " .. 
+        "0015 0041 0015 0041 0015 06F7"
+    );
+end
 
+actions.ch_dn = function()
+    libs.server.run("Unified.USB-UIRT", "pronto", 
+        "0000 006D 0000 0022 00AC 00AC " .. 
+        "0015 0041 0015 0041 0015 0041 " .. 
+        "0015 0016 0015 0016 0015 0016 " .. 
+        "0015 0016 0015 0016 0015 0041 " .. 
+        "0015 0041 0015 0041 0015 0016 " .. 
+        "0015 0016 0015 0016 0015 0016 " .. 
+        "0015 0016 0015 0016 0015 0016 " .. 
+        "0015 0016 0015 0016 0015 0041 " .. 
+        "0015 0016 0015 0016 0015 0016 " .. 
+        "0015 0041 0015 0041 0015 0041 " .. 
+        "0015 0041 0015 0016 0015 0041 " .. 
+        "0015 0041 0015 0041 0015 06F8"
+    );
+end
