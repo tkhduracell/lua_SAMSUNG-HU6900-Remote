@@ -12,7 +12,7 @@ local server = libs.server;
 -- http://www.unifiedremote.com/tutorials/how-to-use-ir
 
 actions.volume_up = function()
-	for i=0, 8 do
+	for i=0, 5 do
 		libs.timer.timeout(actions.volume_up_, 100 * i); 
 	end
 end
@@ -35,7 +35,7 @@ actions.volume_up_ = function()
 end
 
 actions.volume_down = function()
-	for i=0, 8 do
+	for i=0, 5 do
 		libs.timer.timeout(actions.volume_down_, 100 * i); 
 	end
 end
