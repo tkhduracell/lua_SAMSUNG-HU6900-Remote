@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout color="#303030">
+	<row>
+		<button text="Volume up ↑" ontap="volume_up" />
+	</row>
+	<row>
+		<button text="Volume down ↓" ontap="volume_down" />
+	</row>
+	<row>
+		<button text="Mute Sound Ω" ontap="mute" />
+	</row>
+	<row>
+		<button text="Input Source →" ontap="source" />
+	</row>
+	<row weight="wrap">
+		<button text="Power" ontap="power" color="red" />
+	</row>
+</layout>
